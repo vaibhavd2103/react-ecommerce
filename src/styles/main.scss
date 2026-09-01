@@ -1,0 +1,13 @@
+$color-brand: #0066cc;
+
+@import 'vanilla-framework';
+@include vanilla;
+
+@import 'components/product-card';
+
+.app {
+    padding: 2rem;
+    background-color: #fff;
+    height: 100svh;
+    width: 100svw;
+}

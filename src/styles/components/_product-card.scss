@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 5rem;
+    margin-top: 2rem;
+}
+
+.product-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    // padding-inline: 5rem;
+}
+
+
+.product-card {
+    // your BEM block
+    display: flex;
+    flex-direction: column;
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    &__price {
+        // BEM element
+        font-weight: 600;
+        color: $color-positive; // Vanilla semantic colour, in scope after the framework import
+    }
+
+    &--featured {
+        // BEM modifier
+        border: 1px solid $color-brand; // reuse Vanilla's brand colour, don't hardcode a hex
+    }
+
+    // For padding/margins and media queries, use Vanilla's spacing and $breakpoint-*
+    // variables (see the Settings docs) rather than fixed px, so it matches the framework's rhythm.
+}
