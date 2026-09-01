@@ -1,0 +1,83 @@
+// src/styles/components/_product-details.scss
+.product-details {
+    &__back {
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+
+    &__brand {
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-size: 0.875rem;
+        color: $color-mid-dark;
+        margin-bottom: 0.25rem;
+    }
+
+    &__title {
+        margin-bottom: 0.5rem;
+    }
+
+    &__rating {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        color: $color-mid-dark;
+    }
+
+    &__pricing {
+        display: flex;
+        align-items: baseline;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    &__price {
+        font-size: 2rem;
+        font-weight: 600;
+
+        &--original {
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: $color-mid;
+            text-decoration: line-through;
+        }
+    }
+
+    &__discount {
+        padding: 0.15rem 0.5rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: $color-positive;
+        border: 1px solid $color-positive;
+        border-radius: 0.25rem;
+    }
+
+    &__description {
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+    }
+
+    &__reviews {
+        margin-top: 2.5rem;
+    }
+}
+
+.review {
+    padding: 1rem 0;
+    border-top: 1px solid $color-mid-light;
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.25rem;
+    }
+
+    &__rating {
+        color: $color-mid-dark;
+    }
+
+    &__comment {
+        margin: 0;
+        color: $color-dark;
+    }
+}

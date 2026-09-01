@@ -4,6 +4,8 @@ $color-brand: #0066cc;
 @include vanilla;
 
 @import 'components/product-card';
+@import 'components/image-slider';
+@import 'components/product-details';
 
 .app {
     padding: 2rem;

@@ -24,7 +24,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/catalog" element={<Catalog />} />
-          <Route path="/products/:id" element={<ProductDetails />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
         </Routes>
       </main>
     </div>
