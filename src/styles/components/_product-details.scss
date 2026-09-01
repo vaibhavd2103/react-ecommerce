@@ -5,10 +5,20 @@
 }
 
 .product-details {
+    background: #f7f7f7;
+
+    .container {
+            margin: 0 auto;
+            padding: 0 2rem;
+            padding-top: 1rem;
+            max-width: 1200px;
+            padding-bottom: 4rem;
+        }
+        
     &__breadcrumb {
-        margin: 1rem 0;
         font-size: 0.875rem;
         color: $color-mid-dark;
+        margin-bottom: 1rem;
 
         a {
             text-decoration: none;
@@ -115,6 +125,7 @@
 .product-buy {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 
     &__price {
         font-size: 1.75rem;
