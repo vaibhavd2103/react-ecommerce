@@ -1,83 +1,186 @@
-// src/styles/components/_product-details.scss
+.stars {
+    color: #f0a020;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+}
+
 .product-details {
-    &__back {
-        display: inline-block;
-        margin-bottom: 1rem;
+    &__breadcrumb {
+        margin: 1rem 0;
+        font-size: 0.875rem;
+        color: $color-mid-dark;
+
+        a {
+            text-decoration: none;
+        }
+
+        .product-details__crumb-category {
+            text-transform: capitalize;
+        }
     }
 
     &__brand {
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
+        color: $color-link;
         font-size: 0.875rem;
-        color: $color-mid-dark;
         margin-bottom: 0.25rem;
     }
 
     &__title {
+        font-size: 1.5rem;
         margin-bottom: 0.5rem;
     }
 
     &__rating {
         display: flex;
-        gap: 1rem;
-        margin-bottom: 1rem;
-        color: $color-mid-dark;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &__rating-count {
+        font-size: 0.875rem;
     }
 
     &__pricing {
         display: flex;
-        align-items: baseline;
+        align-items: center;
         gap: 0.75rem;
-        margin-bottom: 1rem;
+        margin: 0.5rem 0;
     }
 
-    &__price {
-        font-size: 2rem;
-        font-weight: 600;
-
-        &--original {
-            font-size: 1.25rem;
-            font-weight: 400;
-            color: $color-mid;
-            text-decoration: line-through;
-        }
-    }
-
-    &__discount {
+    &__discount-badge {
         padding: 0.15rem 0.5rem;
-        font-size: 0.875rem;
         font-weight: 600;
-        color: $color-positive;
-        border: 1px solid $color-positive;
+        color: #fff;
+        background: $color-negative;
         border-radius: 0.25rem;
     }
 
-    &__description {
-        margin-bottom: 1.5rem;
-        line-height: 1.5;
+    &__price {
+        font-size: 1.75rem;
+        font-weight: 700;
     }
 
-    &__reviews {
+    &__price--original {
+        color: $color-mid;
+        text-decoration: line-through;
+    }
+
+    &__description {
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    &__section {
         margin-top: 2.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid $color-mid-light;
+    }
+
+    &__specs {
+        width: 100%;
+        border-collapse: collapse;
+
+        th,
+        td {
+            text-align: left;
+            padding: 0.5rem 0.75rem;
+            border-bottom: 1px solid $color-mid-light;
+            vertical-align: top;
+        }
+
+        th {
+            width: 12rem;
+            color: $color-mid-dark;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+    }
+
+    &__reviews-summary {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.product-buy {
+    display: flex;
+    flex-direction: column;
+
+    &__price {
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    &__shipping {
+        font-size: 0.875rem;
+        color: $color-mid-dark;
+        margin-bottom: 0.5rem;
+    }
+
+    &__stock {
+        font-weight: 600;
+        margin-bottom: 1rem;
+
+        &--in {
+            color: $color-positive;
+        }
+
+        &--out {
+            color: $color-negative;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+
+        &--buy {
+            background: #ffa41c;
+            border-color: #ff8f00;
+            color: #111;
+
+            &:hover {
+                background: #fa8900;
+            }
+        }
+    }
+
+    &__meta {
+        margin-top: 0.5rem;
+        font-size: 0.8125rem;
+        color: $color-mid-dark;
     }
 }
 
 .review {
     padding: 1rem 0;
-    border-top: 1px solid $color-mid-light;
+    border-bottom: 1px solid $color-mid-light;
 
     &__head {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin-bottom: 0.25rem;
     }
 
-    &__rating {
-        color: $color-mid-dark;
+    &__date {
+        font-size: 0.8125rem;
+        color: $color-mid;
+        margin-bottom: 0.25rem;
     }
 
     &__comment {
         margin: 0;
-        color: $color-dark;
     }
 }

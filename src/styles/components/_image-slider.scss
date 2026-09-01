@@ -1,4 +1,3 @@
-// src/styles/components/_image-slider.scss
 .image-slider {
     &__stage {
         position: relative;
@@ -31,7 +30,7 @@
         font-size: 1.75rem;
         line-height: 1;
         color: $color-dark;
-        background: rgba(255, 255, 255, 0.85); // translucent overlay over the image
+        background: rgba(255, 255, 255, 0.85);
         border: 1px solid $color-mid-light;
         border-radius: 50%;
         cursor: pointer;
@@ -76,7 +75,5 @@
         &--active {
             border-color: $color-brand;
         }
-
-        // active thumb uses Vanilla's brand colour
     }
 }

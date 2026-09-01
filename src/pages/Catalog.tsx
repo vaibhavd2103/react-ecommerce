@@ -56,23 +56,29 @@ export default function Catalog() {
               <h4>
                 <Link to={`/product/${product.id}`}>{product.title}</Link>
               </h4>
-              <p>
-                ${product.price} · ★ {product.rating.toFixed(1)}
-              </p>
+              <div className="product-card__price">
+                <p>${product.price}</p>
+                <p className="product-card__rating">
+                  <span className="product-card__star">★</span>{" "}
+                  {product.rating.toFixed(1)}
+                </p>
+              </div>
             </div>
           ))}
         </div>
       )}
 
       {total > ITEMS_PER_PAGE && (
-        <Pagination
-          currentPage={currentPage}
-          itemsPerPage={ITEMS_PER_PAGE}
-          totalItems={total}
-          paginate={handlePageChange}
-          scrollToTop
-          aria-label="Product pages"
-        />
+        <div className="pagination-wrapper">
+          <Pagination
+            currentPage={currentPage}
+            itemsPerPage={ITEMS_PER_PAGE}
+            totalItems={total}
+            paginate={handlePageChange}
+            scrollToTop
+            aria-label="Product pages"
+          />
+        </div>
       )}
     </div>
   );

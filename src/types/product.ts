@@ -1,27 +1,49 @@
-// src/types/product.ts
 export interface Review {
   rating: number;
   comment: string;
   date: string;
   reviewerName: string;
+  reviewerEmail: string;
+}
+
+export interface Dimensions {
+  width: number;
+  height: number;
+  depth: number;
+}
+
+export interface ProductMeta {
+  createdAt: string;
+  updatedAt: string;
+  barcode: string;
+  qrCode: string;
 }
 
 export interface Product {
   id: number;
   title: string;
   description: string;
+  category: string;
   price: number;
   discountPercentage: number;
   rating: number;
   stock: number;
-  brand?: string;
-  category: string;
-  thumbnail: string;
+  tags: string[];
+  brand?: string; // optional — some products have no brand
+  sku: string;
+  weight: number;
+  dimensions: Dimensions;
+  warrantyInformation: string;
+  shippingInformation: string;
+  availabilityStatus: string;
+  reviews: Review[];
+  returnPolicy: string;
+  minimumOrderQuantity: number;
+  meta: ProductMeta;
   images: string[];
-  reviews?: Review[];
+  thumbnail: string;
 }
 
-// DummyJSON wraps lists in this envelope (unlike FakeStore's bare array)
 export interface ProductsResponse {
   products: Product[];
   total: number;
