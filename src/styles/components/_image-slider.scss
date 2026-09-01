@@ -1,0 +1,79 @@
+.image-slider {
+    &__stage {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $color-x-light;
+        border: 1px solid $color-mid-light;
+        border-radius: 0.25rem;
+        overflow: hidden;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        max-height: 24rem;
+        object-fit: contain;
+    }
+
+    &__control {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0;
+        font-size: 1.75rem;
+        line-height: 1;
+        color: $color-dark;
+        background: rgba(255, 255, 255, 0.85);
+        border: 1px solid $color-mid-light;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &--prev {
+            left: 0.5rem;
+        }
+
+        &--next {
+            right: 0.5rem;
+        }
+
+        &:hover {
+            background: $color-x-light;
+        }
+    }
+
+    &__thumbnails {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+        overflow-x: auto;
+    }
+
+    &__thumbnail {
+        flex: 0 0 auto;
+        width: 4rem;
+        height: 4rem;
+        padding: 0;
+        background: $color-x-light;
+        border: 2px solid transparent;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        &--active {
+            border-color: $color-brand;
+        }
+    }
+}

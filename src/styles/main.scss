@@ -1,0 +1,15 @@
+$color-brand: #0066cc;
+
+@import 'vanilla-framework';
+@include vanilla;
+
+@import 'components/product-card';
+@import 'components/image-slider';
+@import 'components/product-details';
+@import 'components/landing';
+@import 'components/site-nav';
+
+.app {
+    background-color: #fff;
+    height: 100svh;
+}

@@ -1,0 +1,25 @@
+.site-nav {
+
+    .p-navigation__nav .p-navigation__items {
+        margin-left: auto;
+    }
+
+    &__brand {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    &__logo {
+        width: 1.75rem;
+        height: 1.75rem;
+        flex-shrink: 0;
+        color: $color-brand;
+    }
+
+    &__name {
+        font-size: 1.25rem;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+    }
+}
